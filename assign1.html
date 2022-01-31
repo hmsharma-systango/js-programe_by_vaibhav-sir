@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-1</title>
+</head>
+
+<body>
+
+    <h4 id="layout1"></h4>
+    <h4 id="layout2"></h4>
+    <h4 id="layout3"></h4>
+    <script>
+        let layout1 = document.getElementById("layout1");
+        let layout2 = document.getElementById("layout2");
+        let layout3 = document.getElementById("layout3");
+        let d = ["Sunday", "Monday", "Tuesday", "Wednessday", "Friday", "Saturday"];
+        let m = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        function getTime() {
+            let todayTime = new Date();
+            console.log(todayTime);
+            layout1.innerHTML = `F-A: ${d[todayTime.getDay()].slice(0, 3)}, ${m[todayTime.getMonth()].slice(0, 3)} ${todayTime.getDate()} ${todayTime.getFullYear()}, ${todayTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}`;
+            layout2.innerHTML = `F-B: ${todayTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}, ${d[todayTime.getDay()]}, ${todayTime.getDate()} ${m[todayTime.getMonth()]} ${todayTime.getFullYear()}`;
+            layout3.innerHTML = `F-C: ${todayTime.getDate()}/${todayTime.getMonth() + 1}/${todayTime.getFullYear()} ${todayTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}`
+
+        }
+        setInterval(getTime, 1000);
+    </script>
+
+</body>
+
+</html>

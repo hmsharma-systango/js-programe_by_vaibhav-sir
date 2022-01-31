@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-5</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 50px;">Marks Obtain:</h1>
+    <p id="marks" style="text-align: center; font-size: 50px;"></p>
+    <script>
+        //
+        function percentage(total_marks,per)
+        {
+            let  marks_obtain = (per*total_marks)/100;
+            document.getElementById('marks').innerHTML=marks_obtain;
+        }
+        console.log(percentage(1000, 47.12));
+
+    </script>
+</body>
+</html>

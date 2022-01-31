@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asssignment-9</title>
+</head>
+
+<body>
+    <pre id="output"></pre>
+    <script>
+
+        let r = parseInt(window.prompt("enter the number of Rows"));
+        let output = document.getElementById("output");
+        let current_Line;
+        output.innerHTML = "";
+
+        for (let p = 0; p < r; p++) {
+            current_Line = "";
+
+            for (let spaces = 0; spaces < r - p - 1; spaces++) { current_Line = current_Line + " "; }
+
+            for (let stars = 0; stars < (2 * p) + 1; stars++) { current_Line = current_Line + "*"; }
+
+            output.innerHTML = output.innerHTML + "<br>" + current_Line;
+        }
+
+    </script>
+</body>
+
+</html>

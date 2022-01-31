@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        
+        var n = parseFloat( window.prompt("enter a number:"));
+        var d =  parseInt( window.prompt("enter decimal upto:"));
+        //console.log(typeof n);
+        function up_to_decimal(n,d)
+        {
+            if((typeof n!== 'number') || (typeof d!== 'number'))
+            return false;
+
+            let num = parseFloat(n) || 0;
+        return dec = num.toFixed(d);
+
+        }
+        alert(up_to_decimal(n,d));
+
+
+
+    </script>
+</body>
+
+</html>

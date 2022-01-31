@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-10</title>
+</head>
+<body>
+    <pre id="output"></pre>
+    <script>
+         let r = parseInt(window.prompt("enter the number of Rows"));
+        let output = document.getElementById("output");
+        let current_Line, p = 0;
+        output.innerHTML = "";
+        do {
+            current_Line = "";
+
+            let spaces = 0;
+            while (spaces < r - p - 1) {
+                current_Line = current_Line + " ";
+                spaces++;
+            }
+
+            let stars = 0;
+            while (stars < (2 * p) + 1) {
+                current_Line = current_Line + "*";
+                stars++;
+            }
+
+            output.innerHTML = output.innerHTML + "<br>" + current_Line;
+            p++;
+        } while (p < r)
+
+    </script>
+    
+</body>
+</html>

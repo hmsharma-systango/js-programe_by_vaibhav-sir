@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1 style="text-align: center; font-size: 50px;">Total By For Of Loop</h1>
+    <p id="para" style="text-align: center; font-size: 50px;"></p>
+
+    <script type="text/javascript">
+
+        salaries = [3000, 4000, 5000]
+        let total = 0;
+        for (let value of salaries) {
+            total += value;
+
+            let p = document.getElementById('para');
+            p.innerText = total;
+        }
+        console.log(total);
+    </script>
+</body>
+
+</html>

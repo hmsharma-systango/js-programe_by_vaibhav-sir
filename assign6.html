@@ -1,0 +1,17 @@
+<h1 style="text-align: center; font-size: 50px;">leap year or not:</h1>
+    <p id="leap" style="text-align: center; font-size: 50px;"></p>
+    <script>
+        function leap_year(year)
+        {
+            if( (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0) )
+            {
+                document.getElementById("leap").innerHTML=` ${year} is leap year`;
+            }
+            else{
+                document.getElementById("leap").innerHTML=` ${year} is not leap year`;
+            }
+        }
+        let y = window.prompt("enter the year :");
+        console.log(leap_year(y));
+
+    </script>
