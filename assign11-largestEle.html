@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignmetn-11-largest</title>
+</head>
+
+<body>
+
+    <input type="text" name="inpText" id="inpVal">
+
+    <button onclick=LongestElement()>LongestWord</button>
+    <h3 id="res"></h3>
+
+    <script>
+        let inpVal = document.getElementById("inpVal");
+        let res = document.getElementById("res");
+        function LongestElement() {
+            let LongestLength = 0;
+
+            console.log(inpVal.value);
+
+            words = inpVal.value.split(" ");
+            console.log(words);
+
+            for (let word of words) {
+                if (LongestLength < word.length) {
+                    LongestLength = word.length;
+                }
+            }
+            for (let word of words) {
+                if (LongestLength === word.length) {
+                    res.innerText = res.innerText + word + ",";
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
