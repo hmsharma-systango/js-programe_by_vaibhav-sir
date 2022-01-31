@@ -5,14 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>assignment-18</title>
+
+
 </head>
 <body>
-    <div id="div1">this is div-1</div>
-    <div id="div2">this is div-2</div>
+    <div id="div1" style="background-color: skyblue; height: 10vh;">
+        <h3 id="text1" style="text-align: center;">this is first div</h3>
+    </div>
+    <div id="div2" style="background-color: green; height: 10vh;"> 
+        <h3 id="text2" style="text-align: center;">this is second div</h3>
+    </div>
+
+    <button type="button" style="background-color: grey;" onclick = "Interchange()">InterchangeStyle!</button>
 
     <script>
-        <button type="button" >Click Me!</button>
+            function Interchange(){
+                let div1 = document.getElementById('div1');
+                let div2 = document.getElementById('div2');
 
+                let swapdiv =  div1.style.backgroundColor;
+                div1.style.backgroundColor = div2.style.backgroundColor;
+                div2.style.backgroundColor = swapdiv;
+
+                let text1 = document.getElementById('text1');
+                let text2 = document.getElementById('text2');
+
+                let swaptext = text1.innerText;
+                text1.innerText = text2.innerText;
+                text2.innerText = swaptext;
+
+            }
 
     </script>
     
