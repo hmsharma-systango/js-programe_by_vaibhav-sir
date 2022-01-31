@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-19</title>
+</head>
+
+<body>
+
+    
+        <p id="container" onmouseover="RandomColor()">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae aliquid quo facilis eligendi praesentium,
+            debitis possimus vel fugiat, ratione cumque laborum, doloribus accusantium beatae explicabo officia deleniti
+            ipsam ut ipsa.
+        </p>
+
+    <script>
+       
+function RandomColor(){
+	
+	let col = ["red", "blue", "green","yellow","orange"];
+
+	let randomNum = Math.floor(Math.random() * col.length);
+
+	document.getElementById("container").style.backgroundColor = col[randomNum];
+}
+    </script>
+
+</body>
+
+</html>
